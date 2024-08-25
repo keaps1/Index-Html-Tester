@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Inter, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    --cor01: hsl(75, 94%, 57%);
+    --cor02: hsl(0, 0%, 100%);
+    --cor03: hsl(0, 0%, 20%);
+    --cor04: hsl(0, 0%, 12%);
+    --cor05: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: white;
+    height: 100vh;
+    background-color: var(--cor05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cartão Base */
+
+.card {
+    background-color: var(--cor04);
+    border-radius: 15px;
+    width: 466px;
+    height: 820px;
+    display: flex;
+    flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.349);
+    position: relative;
+}
+
+ @media (max-width: 480px) {
+    .card {
+        /*background-color: yellowgreen;*/
+        width: 333px;
+        height: 586px;
+        justify-content: space-around;
+    }
+}
+
+/* Elementos Cartão */
+
+img {
+    width: 146px; height: 146px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 28px;
+}
+
+h2 {
+    color: var(--cor01);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 100;
+    font-size: 16px;
+}
+
+    /* div.links */
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 82%;
+    margin: 20px 0;
+    
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: var(--cor03);
+    width: 100%; height: 50px;
+    border-radius: 7px;
+    margin: 8px 0;
+    font-weight: 700;
+    &:focus {
+        background-color: var(--cor01);
+        color: black;
+    }
+    &:hover {
+        background-color: var(--cor01);
+        color: black;
+    }
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: 14px;
+    }
+    .links {
+        width: 87%;
+    }
+    button {
+        height: 46px;
+    }
+    img {
+        width: 94px; height: 94px;
+        
+    }
+}
+
+
+/* Rodapé */
+
+.attribution { 
+    margin-top: 12px;
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
